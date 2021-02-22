@@ -48,7 +48,11 @@ The parameter values can be numbers (integers, floats) and/or strings. When you 
 
 By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case. Enclosing strings in quotation marks is optional.
 
+<<<<<<< HEAD
 > _Note for users of previous versions:_ `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated.
+=======
+> *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
+>>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
 
 ---
 
@@ -70,7 +74,7 @@ nav_exclude: true
 
 The `nav_exclude` parameter does not affect the [auto-generating list of child pages](#auto-generating-table-of-contents), which you can use to access pages excluded from the main navigation.
 
-Pages with no `title` are automatically excluded from the navigation.
+Pages with no `title` are automatically excluded from the navigation. 
 
 ---
 
@@ -106,8 +110,12 @@ Sometimes you will want to create a page with many children (a section). First, 
 ```
 
 On the parent pages, add this YAML front matter parameter:
+<<<<<<< HEAD
 
 - `has_children: true` (tells us that this is a parent page)
+=======
+-  `has_children: true` (tells us that this is a parent page)
+>>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
 
 #### Example
 {: .no_toc }
@@ -119,7 +127,10 @@ title: UI Components
 nav_order: 2
 has_children: true
 ---
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
 ```
 
 Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, which has children and is ordered second in the main nav.
@@ -144,6 +155,7 @@ nav_order: 2
 ```
 
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
+<<<<<<< HEAD
 
 ### Ordering child pages
 
@@ -160,6 +172,8 @@ title: Descending Child Pages
 child_nav_order: desc
 ---
 ```
+=======
+>>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
 
 ### Auto-generating Table of Contents
 
@@ -229,6 +243,7 @@ This would create the following navigation structure:
 +-- ..
 ```
 
+<<<<<<< HEAD
 ---
 
 ## Auxiliary Links
@@ -245,6 +260,8 @@ aux_links:
     - "//github.com/just-the-docs/just-the-docs"
 ```
 
+=======
+>>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
 ---
 
 ## External Navigation Links
@@ -301,4 +318,8 @@ The Table of Contents can be made collapsible using the `<details>` and `<summar
 </details>
 ```
 
+<<<<<<< HEAD
 The result is shown at [the top of this page](#navigation-structure) (`{:toc}` can be used only once on each page).
+=======
+The result is shown at [the top of this page](#navigation-structure) (`{:toc}` can be used only once on each page).
+>>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
