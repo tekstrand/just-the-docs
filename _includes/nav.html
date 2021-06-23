@@ -60,7 +60,6 @@
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
       {%- unless node.nav_exclude -%}
-<<<<<<< HEAD
       <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
@@ -72,15 +71,6 @@
           {%- else -%}
             {%- assign children_list = pages_list | where: "parent", node.title | where_exp:"item", "item.grand_parent == nil" -%}
           {%- endif -%}
-=======
-      <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
-        {%- if node.has_children -%}
-          <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
-        {%- endif -%}
-        <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
-        {%- if node.has_children -%}
-          {%- assign children_list = pages_list | where: "parent", node.title -%}
->>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
           <ul class="nav-list ">
           {%- for child in children_list -%}
             {%- unless child.nav_exclude -%}
@@ -88,7 +78,6 @@
               {%- if child.has_children -%}
                 <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
               {%- endif -%}
-<<<<<<< HEAD
               <a href="{{ child.url | relative_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
               {%- if child.has_children -%}
                 {%- if node.child_nav_order == 'desc' -%}
@@ -96,20 +85,11 @@
                 {%- else -%}
                 {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
                 {%- endif -%}
-=======
-              <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
-              {%- if child.has_children -%}
-                {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
->>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
                 <ul class="nav-list">
                 {%- for grand_child in grand_children_list -%}
                   {%- unless grand_child.nav_exclude -%}
                   <li class="nav-list-item {% if page.url == grand_child.url %} active{% endif %}">
-<<<<<<< HEAD
                     <a href="{{ grand_child.url | relative_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
-=======
-                    <a href="{{ grand_child.url | absolute_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
->>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
                   </li>
                   {%- endunless -%}
                 {%- endfor -%}
@@ -124,7 +104,6 @@
       {%- endunless -%}
     {%- endif -%}
   {%- endfor -%}
-<<<<<<< HEAD
   {%- assign nav_external_links = site.nav_external_links -%}
   {%- for node in nav_external_links -%}
     <li class="nav-list-item external">
@@ -161,6 +140,3 @@
   {%- endif -%}
 
 {%- endif -%}
-=======
-</ul>
->>>>>>> cd4a839 (Revert "Merge in branch for recursive navigation")
